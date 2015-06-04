@@ -8,6 +8,11 @@
      <link href="MasterStyleSheet.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,8 +38,10 @@
             </asp:ContentPlaceHolder>
         </div>
         <div id="footer">
-            <p>Common Footer Content</p>
+            <p class="auto-style1"><strong><em>DeVry Team B Project 2015</em></strong></p>
             <asp:ContentPlaceHolder ID="cphFooter" runat="server">
+                <p>
+                    Christina Roark, Brad Busch, David Dalloo, Jose Morales, Ionut Sava</p>
             </asp:ContentPlaceHolder>
         </div>
     </div>
