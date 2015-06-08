@@ -75,6 +75,7 @@
 &nbsp;<asp:Label ID="Label2" runat="server" Text="Qty:"></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox2" runat="server" OnTextChanged="TextBox2_TextChanged" Width="29px"></asp:TextBox>
 &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Shop.aspx">Add</asp:LinkButton>
+    <br />
     <br/>
     <hr />
 </asp:Content>

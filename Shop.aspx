@@ -12,10 +12,7 @@
     <asp:TextBox ID="TextBox1" runat="server" Height="334px" TextMode="MultiLine" Width="431px"></asp:TextBox>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
-    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
     <br />
-    <hr />
-    <asp:LinkButton ID="LinkButton2" runat="server">LinkButton</asp:LinkButton>
     <br />
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">

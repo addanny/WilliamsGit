@@ -22,7 +22,7 @@
                 <b>
                     <i>
                         <u>
-                            Williams Specialty Company E-Commerce website
+                             Williams Specialty Company E-Commerce website
                         </u>
                     </i>
                 </b>
@@ -35,6 +35,15 @@
         <div id="sidePanel">
             <asp:ContentPlaceHolder ID="cphLeftNavigation" runat="server">
 
+                <p>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                </p>
+                <p>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx">Products</asp:HyperLink>
+                </p>
+                <p>
+                    &nbsp;</p>
+
             </asp:ContentPlaceHolder>
         </div>
         <div id="footer">
@@ -45,6 +54,8 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>
