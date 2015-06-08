@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : Page
 {
+    private object txtPlaqueAdd;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         Label1.Visible = false;
