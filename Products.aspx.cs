@@ -5,50 +5,50 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         Label1.Visible = false;
-        TextBox1.Visible = false;
+        txtTShirtQty.Visible = false;
         Label2.Visible = false;
-        TextBox2.Visible = false;
-        LinkButton2.Visible = false;
-        LinkButton3.Visible = false;
+        txtPlaqueAdd.Visible = false;
+        linkTShirtAdd.Visible = false;
+        linkPlaqueAdd.Visible = false;
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        if(TextBox2.Text != "")
+        if(txtPlaqueAdd.Text != "")
         {
-            TextBox2.Visible = true;
-            LinkButton3.Visible = true;
+            txtPlaqueAdd.Visible = true;
+            linkPlaqueAdd.Visible = true;
         Label1.Visible = true;
-        TextBox1.Visible = true;
-        TextBox1.Focus();
-        LinkButton2.Visible = true;
+        txtTShirtQty.Visible = true;
+        txtTShirtQty.Focus();
+        linkTShirtAdd.Visible = true;
         }
         Label1.Visible = true;
-        TextBox1.Visible = true;
-        TextBox1.Focus();
-        LinkButton2.Visible = true;
+        txtTShirtQty.Visible = true;
+        txtTShirtQty.Focus();
+        linkTShirtAdd.Visible = true;
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        if (TextBox1.Text != "")
+        if (txtTShirtQty.Text != "")
         {
-            TextBox1.Visible = true;
-            LinkButton2.Visible = true;
+            txtTShirtQty.Visible = true;
+            linkTShirtAdd.Visible = true;
             Label2.Visible = true;
-            TextBox2.Visible = true;
-            TextBox2.Focus();
-            LinkButton3.Visible = true;
+            txtPlaqueAdd.Visible = true;
+            txtPlaqueAdd.Focus();
+            linkPlaqueAdd.Visible = true;
         }
         Label2.Visible = true;
-        TextBox2.Visible = true;
-        TextBox2.Focus();
-        LinkButton3.Visible = true;
+        txtPlaqueAdd.Visible = true;
+        txtPlaqueAdd.Focus();
+        linkPlaqueAdd.Visible = true;
     }
 
     protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -59,5 +59,12 @@ public partial class _Default : System.Web.UI.Page
     protected void TextBox2_TextChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void linkPlaqueAdd_Click(object sender, EventArgs e)
+    {
+        String plaqueQuantity = txtPlaqueAdd.ToString();
+        
+        
     }
 }

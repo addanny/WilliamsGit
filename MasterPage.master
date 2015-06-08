@@ -42,7 +42,8 @@
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx">Products</asp:HyperLink>
                 </p>
                 <p>
-                    &nbsp;</p>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                </p>
 
             </asp:ContentPlaceHolder>
         </div>

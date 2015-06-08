@@ -9,11 +9,9 @@
     <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" Font-Names="Arial" Height="232px" Width="396px">
     </asp:Login>
 </div>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
 </asp:Content>
