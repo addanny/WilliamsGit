@@ -12,16 +12,16 @@ public partial class _Default : Page
         Label1.Visible = false;
         txtTShirtQty.Visible = false;
         Label2.Visible = false;
-        txtPlaqueAdd.Visible = false;
+        txtPlaqueQty.Visible = false;
         linkTShirtAdd.Visible = false;
         linkPlaqueAdd.Visible = false;
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        if(txtPlaqueAdd.Text != "")
+        if(txtPlaqueQty.Text != "")
         {
-            txtPlaqueAdd.Visible = true;
+            txtPlaqueQty.Visible = true;
             linkPlaqueAdd.Visible = true;
         Label1.Visible = true;
         txtTShirtQty.Visible = true;
@@ -41,13 +41,13 @@ public partial class _Default : Page
             txtTShirtQty.Visible = true;
             linkTShirtAdd.Visible = true;
             Label2.Visible = true;
-            txtPlaqueAdd.Visible = true;
-            txtPlaqueAdd.Focus();
+            txtPlaqueQty.Visible = true;
+            txtPlaqueQty.Focus();
             linkPlaqueAdd.Visible = true;
         }
         Label2.Visible = true;
-        txtPlaqueAdd.Visible = true;
-        txtPlaqueAdd.Focus();
+        txtPlaqueQty.Visible = true;
+        txtPlaqueQty.Focus();
         linkPlaqueAdd.Visible = true;
     }
 
@@ -63,7 +63,7 @@ public partial class _Default : Page
 
     protected void linkPlaqueAdd_Click(object sender, EventArgs e)
     {
-        String plaqueQuantity = txtPlaqueAdd.ToString();
+        String plaqueQuantity = txtPlaqueQty.ToString();
         
         
     }
