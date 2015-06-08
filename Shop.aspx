@@ -9,13 +9,10 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
-    <asp:TextBox ID="TextBox1" runat="server" Height="266px" TextMode="MultiLine" Width="431px"></asp:TextBox>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:TextBox ID="TextBox1" runat="server" Height="334px" TextMode="MultiLine" Width="431px"></asp:TextBox>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
-    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
     <br />
-    <hr />
     <br />
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">

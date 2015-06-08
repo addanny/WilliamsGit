@@ -31,6 +31,9 @@ Check out our
 &nbsp;section to find out more
 
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
+    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Products.aspx">Products</asp:LinkButton>
+</asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
     <p>
     Christina Roark, Brad Busch, David Dalloo, Jose Morales, Ionut Sava</p>
