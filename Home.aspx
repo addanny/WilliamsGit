@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
 
     <p>
-        &nbsp;</p>
+        &nbsp;&nbsp;</p>
 <ul>
     <li>
         <asp:Label ID="Label1" runat="server" style="text-decoration: underline; font-weight: 700; font-style: italic" Text="About our products"></asp:Label>

@@ -45,10 +45,10 @@
                 <td colspan="2" class="auto-style6">Printed T-Shirts</td>
             </tr>            
            </tbody></table>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buy" />
+        <asp:Button ID="btnTShirtAdd" runat="server" OnClick="Button1_Click" Text="Buy" />
 &nbsp;<asp:Label ID="Label1" runat="server" Text="Qty:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtTShirtQty" runat="server" OnTextChanged="TextBox1_TextChanged" Width="29px"></asp:TextBox>
-&nbsp;<asp:LinkButton ID="linkTShirtAdd" runat="server" PostBackUrl="~/Shop.aspx">Add</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="linkTShirtAdd" runat="server" OnClick="linkTShirtAdd_Click">Add</asp:LinkButton>
         <br />
     <hr />
     <table class="auto-style2">
@@ -71,14 +71,16 @@
                 <td colspan="2" class="auto-style6">Wooden Plaques</td>
             </tr>            
            </tbody></table>
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Buy" />
+        <asp:Button ID="btnPlaqueAdd" runat="server" OnClick="Button2_Click" Text="Buy" />
 &nbsp;<asp:Label ID="Label2" runat="server" Text="Qty:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtPlaqueQty" runat="server" OnTextChanged="TextBox2_TextChanged" Width="29px"></asp:TextBox>
-&nbsp;<asp:LinkButton ID="linkPlaqueAdd" runat="server" PostBackUrl="~/Shop.aspx">Add</asp:LinkButton>
+&nbsp;<asp:TextBox ID="txtPlaqueQty" runat="server" OnTextChanged="TextBox2_TextChanged" Width="29px" TextMode="Number"></asp:TextBox>
+&nbsp;<asp:LinkButton ID="linkPlaqueAdd" runat="server">Add</asp:LinkButton>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Label" Visible="False"></asp:Label>
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="test" />
     <br />
     <br/>
     <hr />
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
-</asp:Content>
+
 
