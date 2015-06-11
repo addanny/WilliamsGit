@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Williams Specialty Company - Products" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Products.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Williams Specialty Company - Products" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Products.aspx.cs" Inherits="Products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -79,7 +79,7 @@
 &nbsp;<asp:LinkButton ID="linkPlaqueAdd" runat="server">Add</asp:LinkButton>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Jose" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" />
       <br />
     <br/>
     <hr />

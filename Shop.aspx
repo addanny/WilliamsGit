@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Shop.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Shop.aspx.cs" Inherits="Shop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -9,7 +9,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
-    <asp:TextBox ID="listBoxShop" runat="server" Height="334px" TextMode="MultiLine" Width="431px"></asp:TextBox>
+    <asp:TextBox ID="listBoxShop" runat="server" Height="250px" TextMode="MultiLine" Width="431px" style="margin-bottom: 0px"></asp:TextBox>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
 </asp:Content>
