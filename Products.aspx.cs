@@ -68,6 +68,7 @@ public partial class Products : Page
         int intOutput = 0;
         lblPlaqueWarning.Visible = false;
 
+        //determine that the value is parsable - if it is, assign values. Else, display error
         if (int.TryParse(txtPlaqueQty.Text, out intOutput))
         { 
             testProduct.productName = "Plaque";
