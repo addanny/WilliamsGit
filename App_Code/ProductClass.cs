@@ -9,8 +9,8 @@ using System.Web;
 public class ProductClass
 {
     //obvious variables
-    private String product;
-    private int price;
+    private readonly String product;
+    private readonly int price;
     private int quantity;
 
     //constructor
@@ -45,7 +45,7 @@ public class ProductClass
         }
     }
 
-    //get and set the price of the product
+    //get and set the quantity of the product
     public int productQty
     {
         get
