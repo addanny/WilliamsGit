@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Williams Specialty Company - Home" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
 
     <p>
-        &nbsp;</p>
+        &nbsp;&nbsp;</p>
 <ul>
     <li>
         <asp:Label ID="Label1" runat="server" style="text-decoration: underline; font-weight: 700; font-style: italic; font-family:Verdana, Geneva, Tahoma, sans-serif" Text="About our products"></asp:Label>
