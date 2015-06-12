@@ -11,6 +11,8 @@
     <style type="text/css">
         .auto-style1 {
             text-decoration: underline;
+            
+
         }
     </style>
 </head>
@@ -36,13 +38,13 @@
             <asp:ContentPlaceHolder ID="cphLeftNavigation" runat="server">
 
                 <p>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" ForeColor="White">Home</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx">Products</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx" ForeColor="White">Products</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx" ForeColor="White">Login</asp:HyperLink>
                 </p>
 
             </asp:ContentPlaceHolder>

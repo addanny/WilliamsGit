@@ -3,7 +3,7 @@
 
 #container
 {
-      width: 673px;
+      width: 700px;
       border: solid 1px black;
       margin: 0px auto;
 }
@@ -11,41 +11,46 @@
 #header
 {
       color: #FFFFFF;
-      width: 671px;     
-      height: 47px;
-      background-color: #778CB3;
+      width: 699px;     
+      height: 81px;
+      background-color: #639BF1;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #sidePanel
 {
-      width: 213px;     
+      width: 190px;     
       height: 372px;
-      margin-top: 4px;
-      background-color: #778CB3;
+      margin-top: 2px;
+      background-color: #293E6A;
       color: #FFFFFF;   
       padding: 4px;
       text-align: center;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      
 }
 
 #content
 {
-      width: 446px;     
+      width: 500px;     
       float: right;
-      height: 380px;    
-      margin-top: 5px;
-      background-color: #A0AFCB;
+      height: 378px;    
+      margin-top: 2px;
+      margin-left:auto;
+      background-color: #3B5998;
 }
 
 #footer
 {
-      background-color: #F7CB33;
+      background-color: #639BF1;
       padding: 12px;   
-      width: 649px;
+      width: 674px;
       color: #000000; 
       font-size: 90%;
       text-align: center;     
       clear: both;
       border-top: 5px solid #FFFFFF;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 
@@ -55,7 +60,7 @@ h1
 
 hr
 {
-    width: 80%;
+    width: 90%;
 }
 
 #headerLink
