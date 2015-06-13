@@ -7,15 +7,16 @@ using System.Web.UI.WebControls;
 
 public partial class Shop : Page
 {
-   
+
+    
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
 
-    public void AddItem (String item)
+    protected void listBoxShop_TextChanged(object sender, EventArgs e)
     {
-        
+
     }
 }

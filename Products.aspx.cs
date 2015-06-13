@@ -68,12 +68,16 @@ public partial class Products : Page
             totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
             //add to total price
             ProductClass.productTotalPrice = ProductClass.productTotalPrice + totalPlaquePrice;
+            ////////////////////////////////////////////////////
+            //CODE HERE TO ADD TO THE LISTBOX ON THE SHOP PAGE//
+            ////////////////////////////////////////////////////
             Response.Redirect("./Shop.aspx");
         }
         else
         {
             lblPlaqueWarning.Visible = true;
             lblPlaqueWarning.Text = "Please enter a valid number";
+            txtPlaqueQty.Text = "";
         }
     }
 
@@ -93,12 +97,16 @@ public partial class Products : Page
             totalTShirtPrice = ProductClass.productPrice * ProductClass.productQty;
             //add to total price
             ProductClass.productTotalPrice = ProductClass.productTotalPrice + totalTShirtPrice;
+            ////////////////////////////////////////////////////
+            //CODE HERE TO ADD TO THE LISTBOX ON THE SHOP PAGE//
+            ////////////////////////////////////////////////////
             Response.Redirect("./Shop.aspx");
         }
         else
         {
             lblTShirtWarning.Visible = true;
             lblTShirtWarning.Text = "Please enter a valid number";
+            txtTShirtQty.Text = "";
         }
     }
 
