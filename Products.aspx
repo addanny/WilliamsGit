@@ -28,7 +28,7 @@
         <table class="auto-style2">
             <tbody><tr>
                 <th rowspan="6" class="auto-style3">
-                    <img runat="server" src="~/Pictures/T-Shirt%20Pics.jpg" style="height: 67px; width: 94px"/>
+                    <img runat="server" src="~/Pictures/t-shirt-3.png" style="height: 67px; width: 94px"/>
                 </th>
                 <th class="auto-style5">Name: 
                 </th><td class="auto-style5">T-Shirt</td>
@@ -56,7 +56,7 @@
     <table class="auto-style2">
             <tbody><tr>
                 <th rowspan="6" class="auto-style3">
-                    <img runat="server" src="~/Pictures/photo-plaques-group.jpg" style="height: 67px; width: 94px"/>
+                    <img runat="server" src="~/Pictures/plaque-2.png" style="height: 67px; width: 94px"/>
                 </th>
                 <th class="auto-style5">Name: 
                 </th><td class="auto-style5">Plaques</td>
