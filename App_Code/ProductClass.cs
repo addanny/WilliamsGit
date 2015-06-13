@@ -6,21 +6,16 @@ using System.Web;
 /// <summary>
 /// Summary description for ProductClass
 /// </summary>
-public class ProductClass
+public static class ProductClass
 {
     //obvious variables
-    private readonly String product;
-    private readonly int price;
-    private int quantity;
-
-    //constructor
-    public ProductClass()
-    {
-
-    }
+    private static String product;
+    private static int price = 0;
+    private static int quantity = 0;
+    private static int totalPrice = 0;
 
     //get and set the name of the product
-    public String productName
+    public static String productName
     {
         get
         {
@@ -28,12 +23,12 @@ public class ProductClass
         }
         set
         {
-            this.product = value;
+            product = value;
         }
     }
 
     //get and set the price of the product
-    public int productPrice
+    public static int productPrice
     {
         get
         {
@@ -41,12 +36,12 @@ public class ProductClass
         }
         set
         {
-            this.price = value;
+            price = value;
         }
     }
 
     //get and set the quantity of the product
-    public int productQty
+    public static int productQty
     {
         get
         {
@@ -54,7 +49,20 @@ public class ProductClass
         }
         set
         {
-            this.price = value;
+            price = value;
+        }
+    }
+
+    //get and set the total price of the product(s)
+    public static int productTotalPrice
+    {
+        get
+        {
+            return totalPrice;
+        }
+        set
+        {
+            totalPrice = value;
         }
     }
 

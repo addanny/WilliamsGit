@@ -14,7 +14,7 @@ public partial class Shop : Page
 
     }
 
-    public void AddItem (String item)
+    public static void AddItem (String item)
     {
         
     }

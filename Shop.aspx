@@ -9,7 +9,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
-    <asp:TextBox ID="listBoxShop" runat="server" Height="250px" TextMode="MultiLine" Width="431px" style="margin-bottom: 0px"></asp:TextBox>
+    <asp:TextBox ID="listBoxShop" runat="server" Height="250px" TextMode="MultiLine" Width="431px" style="margin-bottom: 0px" ReadOnly="True"></asp:TextBox>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
 </asp:Content>
