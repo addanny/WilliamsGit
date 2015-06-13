@@ -75,11 +75,11 @@
            </tbody></table>
         <asp:Button ID="btnPlaqueAdd" runat="server" OnClick="Button2_Click" Text="Buy" />
 &nbsp;<asp:Label ID="Label2" runat="server" Text="Qty:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtPlaqueQty" runat="server" OnTextChanged="TextBox2_TextChanged" Width="29px" TextMode="Number"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtPlaqueQty" runat="server" OnTextChanged="TextBox2_TextChanged" Width="29px"></asp:TextBox>
 &nbsp;<asp:LinkButton ID="linkPlaqueAdd" runat="server">Add</asp:LinkButton>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" Height="26px" Visible="False" Width="48px" />
       <br />
     <br/>
     <hr />
