@@ -79,7 +79,7 @@
 &nbsp;<asp:LinkButton ID="linkPlaqueAdd" runat="server">Add</asp:LinkButton>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" Visible="False" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" />
       <br />
     <br/>
     <hr />

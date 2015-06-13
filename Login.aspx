@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Williams Specialty Company - Login" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Williams Specialty Company - Login" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -8,11 +8,9 @@
     <br />
     <br />
     <br />
-        <asp:Login ID="Login1" runat="server">
-        </asp:Login>
-        <br />
-        <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+    </asp:Login>
 </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
