@@ -19,4 +19,9 @@ public partial class Shop : Page
     {
 
     }
+
+    public void AddItem()
+    {
+        
+    }
 }

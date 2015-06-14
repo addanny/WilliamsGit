@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
 
     <p>
-        &nbsp;&nbsp;</p>
+      &nbsp;</p>
 <ul>
     <li>
         <asp:Label ID="Label1" runat="server" style="text-decoration: underline; font-weight: 700; font-style: italic; font-family:Verdana, Geneva, Tahoma, sans-serif" Text="About our products"></asp:Label>
@@ -13,7 +13,7 @@
 </ul>
 <div>
     <p style="width: 442px;font-family:Verdana, Geneva, Tahoma, sans-serif ">
-        Williams specialty company provides engraving services to its customers and has done so successfuly for years.</p>
+        Williams specialty company provides engraving services to its customers and has done so successfuly for years.s.</p>
 </div>
 <ul>
     <li>
