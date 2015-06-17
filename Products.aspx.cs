@@ -101,19 +101,20 @@ public partial class Products : Page
         lblPlaqueWarning.Visible = false;
 
         //determine that the value is parsable - if it is, assign values. Else, display error
-        if (int.TryParse(txtTShirtQty.Text, out intOutput))
+        if (int.TryParse(txtPlaqueQty.Text, out intOutput))
         {
             ProductClass.productName = "Plaque";
             ProductClass.productPrice = 10;
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
-            //display summary of the order
-            MessageBox.Show(new Form { TopMost = true },
-                "ORDER REVIEW" + "\n_______________________\n"
-                + ProductClass.productName + "\n"
-                + "Quantity: " + ProductClass.productQty.ToString() + "\n"
-                + "Total Price: " + totalPlaquePrice.ToString());
+            String displayOrder = "ORDER REVIEW" + "\n_______________________\n" + ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString() + "\n\n\nIs this correct?";
+            DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
+            if (orderReviewDialog == DialogResult.Yes)
+            {
+                //add items to db
+                MessageBox.Show("This is test for yes");
+            }
         }
         else
         {
