@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Williams Specialty Company - Login" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Williams Specialty Company - Login" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
