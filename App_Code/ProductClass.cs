@@ -10,9 +10,8 @@ public static class ProductClass
 {
     //obvious variables
     private static String product;
-    private static int price = 0;
-    private static int quantity = 0;
-    private static int totalPrice = 0;
+    private static int price;
+    private static int quantity;
 
     //get and set the name of the product
     public static String productName
@@ -49,20 +48,9 @@ public static class ProductClass
         }
         set
         {
-            price = value;
+            quantity = value;
         }
     }
 
-    //get and set the total price of the product(s)
-    public static int productTotalPrice
-    {
-        get
-        {
-            return totalPrice;
-        }
-        set
-        {
-            totalPrice = value;
-        }
-    }
+    
 }
