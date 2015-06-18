@@ -73,12 +73,15 @@ public partial class Products : Page
             ProductClass.productQty = Int32.Parse(txtTShirtQty.Text);
             //price of tshirts
             int totalTShirtPrice = ProductClass.productPrice * ProductClass.productQty;
+            String displayOrder = "ORDER REVIEW" + "\n_______________________\n" + ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalTShirtPrice.ToString();
             //display summary of the order
-            MessageBox.Show (new Form {TopMost = true},
-                "ORDER REVIEW" + "\n_______________________\n"
-                + ProductClass.productName + "\n" 
-                + "Quantity: " + ProductClass.productQty.ToString() +"\n" 
-                + "Total Price: " + totalTShirtPrice.ToString());
+            DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
+            if (orderReviewDialog == DialogResult.Yes)
+            {
+                //add items to db
+                MessageBox.Show("This is test for yes");
+
+            }
         }
         else
         {
@@ -104,7 +107,7 @@ public partial class Products : Page
         if (int.TryParse(txtPlaqueQty.Text, out intOutput))
         {
             ProductClass.productName = "Plaque";
-            ProductClass.productPrice = 10;
+            ProductClass.productPrice = 20;
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
