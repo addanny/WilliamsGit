@@ -22,6 +22,7 @@
         <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
         <asp:CommandField ShowEditButton="True" />
+        <asp:CommandField ShowDeleteButton="True" />
     </Columns>
     <EditRowStyle BackColor="#999999" />
     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
