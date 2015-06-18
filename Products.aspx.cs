@@ -108,12 +108,13 @@ public partial class Products : Page
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
-            String displayOrder = "ORDER REVIEW" + "\n_______________________\n" + ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString() + "\n\n\nIs this correct?";
+            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString() + "\n\n\nIs this correct?";
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
                 //add items to db
                 MessageBox.Show("This is test for yes");
+                
             }
         }
         else

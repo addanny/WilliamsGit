@@ -53,6 +53,9 @@
                     <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="White" NavigateUrl="~/OrderReview.aspx">Order Review</asp:HyperLink>
                 </p>
                 <p>
+                    <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="White" NavigateUrl="~/CustomerManagement.aspx">Customer Management</asp:HyperLink>
+                </p>
+                <p>
                     &nbsp;</p>
 
             </asp:ContentPlaceHolder>
