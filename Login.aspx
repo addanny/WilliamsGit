@@ -12,7 +12,7 @@
         <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" ForeColor="White">
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" ForeColor="White" VisibleWhenLoggedIn="False">
     </asp:Login>
         <br />
         <br />
