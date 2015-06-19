@@ -45,17 +45,19 @@ public partial class _Default : System.Web.UI.Page
         {
             //access granted
             Session["UserAuthentication"] = username;
-            Session.Timeout = 1;
+            //Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
             lblLoginMsg.Visible = true;
             lblUserName.Text = username;
             lblUserName.Visible = true;
             Login1.Visible = false;
             //Response.Redirect("~/Home.aspx");
+            con.Close();
         }
         else
         {
             //access denied
             Session["UserAuthentication"] = "";
+            con.Close();
         }
     }
 
