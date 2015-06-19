@@ -6,13 +6,17 @@
     <div style="height: 359px">
     <br />
     <br />
+        <asp:Label ID="lblLoginMsg" runat="server" ForeColor="White" Text="You are logged in as :" Visible="False"></asp:Label>
+&nbsp;
+        <asp:Label ID="lblUserName" runat="server" ForeColor="White" Text="[user name]" Visible="False"></asp:Label>
+        <br />
+        <br />
     <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" ForeColor="White">
     </asp:Login>
 </div>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
-</asp:Content>
+
 

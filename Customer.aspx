@@ -99,6 +99,5 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphFooter" Runat="Server">
-</asp:Content>
+
 

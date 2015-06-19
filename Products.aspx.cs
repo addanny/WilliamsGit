@@ -16,8 +16,6 @@ using System.Windows.Forms;
 
 public partial class Products : Page
 {
-    
-    int totalPlaquePrice = 0;
 
     //keep textboxes hidden until prompted by the user
     protected void Page_Load(object sender, EventArgs e)
@@ -28,6 +26,8 @@ public partial class Products : Page
         txtPlaqueQty.Visible = false;
         linkTShirtAdd.Visible = false;
         linkPlaqueAdd.Visible = false;
+        lblEngrave.Visible = false;
+        txtEngrave.Visible = false;
     }
 
     //im going to assume that this is the "Buy" button for the plaques. this has since been renamed
@@ -37,6 +37,8 @@ public partial class Products : Page
         txtPlaqueQty.Visible = true;
         txtPlaqueQty.Focus();
         linkPlaqueAdd.Visible = true;
+        lblEngrave.Visible = true;
+        txtEngrave.Visible = true;
     }
 
     //im going to assume that this is the "Buy" button for the tshirts. this has since been renamed
@@ -73,14 +75,14 @@ public partial class Products : Page
             ProductClass.productQty = Int32.Parse(txtTShirtQty.Text);
             //price of tshirts
             int totalTShirtPrice = ProductClass.productPrice * ProductClass.productQty;
-            String displayOrder = "ORDER REVIEW" + "\n_______________________\n" + ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalTShirtPrice.ToString();
+            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalTShirtPrice.ToString("C2");
             //display summary of the order
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
                 //add items to db
                 MessageBox.Show("This is test for yes");
-
+                Response.Redirect("~/Customer.aspx");
             }
         }
         else
@@ -109,19 +111,21 @@ public partial class Products : Page
             ProductClass.productName = "Plaque";
             ProductClass.productPrice = 20;
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
+            ProductClass.productEngraving = txtEngrave.Text;
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
-            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString() + "\n\n\nIs this correct?";
+            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString("C2") + "\nEngraving: " + ProductClass.productEngraving + "\n\n\nIs this correct?";
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
                 //add items to db
                 MessageBox.Show("This is test for yes");
-                
+                Response.Redirect("~/Customer.aspx");
             }
         }
         else
         {
+            //display warning if int is not entered
             lblPlaqueWarning.Visible = true;
             lblPlaqueWarning.Text = "Please enter a valid number";
             txtTShirtQty.Text = "";

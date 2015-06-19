@@ -12,6 +12,7 @@ public static class ProductClass
     private static String product;
     private static int price;
     private static int quantity;
+    private static String engraving;
 
     //get and set the name of the product
     public static String productName
@@ -49,6 +50,18 @@ public static class ProductClass
         set
         {
             quantity = value;
+        }
+    }
+
+    public static String productEngraving
+    {
+        get
+        {
+            return engraving;
+        }
+        set
+        {
+            engraving = value;
         }
     }
 

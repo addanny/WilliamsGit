@@ -16,6 +16,7 @@
         <Columns>
             <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+            <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" />
             <asp:CommandField ShowEditButton="True" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
@@ -29,7 +30,7 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Username], [Password] FROM [tblLogin]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Username], [Password], [Role] FROM [tblLogin]"></asp:SqlDataSource>
 </p>
 <p>
     &nbsp;</p>

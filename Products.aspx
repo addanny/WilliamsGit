@@ -80,9 +80,12 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
         <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" Height="26px" Visible="False" Width="48px" />
+        <br />
+        <br />
+        <asp:Label ID="lblEngrave" runat="server" Text="Engraving: "></asp:Label>
+        <asp:TextBox ID="txtEngrave" runat="server" Width="323px"></asp:TextBox>
       <br />
     <br/>
-    <hr />
-</asp:Content>
+    </asp:Content>
 
 

@@ -46,8 +46,11 @@ public partial class _Default : System.Web.UI.Page
             //access granted
             Session["UserAuthentication"] = username;
             Session.Timeout = 1;
-            MessageBox.Show(new Form { TopMost = true }, "Successful");
-            Response.Redirect("~/Home.aspx");
+            lblLoginMsg.Visible = true;
+            lblUserName.Text = username;
+            lblUserName.Visible = true;
+            Login1.Visible = false;
+            //Response.Redirect("~/Home.aspx");
         }
         else
         {
