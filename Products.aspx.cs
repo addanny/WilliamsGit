@@ -96,7 +96,15 @@ public partial class Products : Page
     //button that is being used to test the syntax/logic - delete or make hidden when done
     protected void Button3_Click(object sender, EventArgs e)
     {
-        Response.Redirect("./Shop.aspx");
+        try
+        {
+            string userName = Session["UserAuthentication"].ToString();
+            MessageBox.Show(userName);
+        }
+        catch (Exception)
+        {
+            MessageBox.Show("No one is logged in!", "Error");
+        }
     }
 
     //will add the qty of the plaques to the shop page. will catch non-integers

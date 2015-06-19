@@ -20,7 +20,15 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //turn off the login form and display user name when page loads
+        if(Session["User Authentication"] != null)
+        {
+            lblLoginMsg.Visible = true;
+            lblUserName.Text = Session["User Authentication"].ToString();
+            lblUserName.Visible = true;
+            Login1.Visible = false;
+            btnLogout.Visible = true;
+        }
     }
 
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
@@ -45,7 +53,7 @@ public partial class _Default : System.Web.UI.Page
         {
             //access granted
             Session["UserAuthentication"] = username;
-            //Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
+            Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
             lblLoginMsg.Visible = true;
             lblUserName.Text = username;
             lblUserName.Visible = true;
@@ -61,4 +69,15 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        Session.Clear();
+        Session.Abandon();
+        Session.Remove("UserAuthentication");
+
+        Session["UserAuthentication"] = null;
+
+        Response.Redirect("~/Login.aspx");
+    }
 }

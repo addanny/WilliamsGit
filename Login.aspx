@@ -10,12 +10,13 @@
 &nbsp;
         <asp:Label ID="lblUserName" runat="server" ForeColor="White" Text="[user name]" Visible="False"></asp:Label>
         <br />
-        <br />
-    <br />
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" ForeColor="White">
     </asp:Login>
+        <br />
+        <br />
+        <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" Visible="False" />
 </div>
 </asp:Content>
 

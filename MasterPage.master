@@ -64,8 +64,8 @@
                 <p>
                     &nbsp;</p>
                 <p>
-                    <asp:Label ID="Label1" runat="server" Text="Hello, " Visible="False"></asp:Label>
-                    <asp:Label ID="lblUserName" runat="server" Text="guest" Visible="False"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Hello, "></asp:Label>
+                    <asp:Label ID="lblUserName" runat="server" Text="[username]"></asp:Label>
                 </p>
 
             </asp:ContentPlaceHolder>
