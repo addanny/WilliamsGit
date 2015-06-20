@@ -27,7 +27,14 @@ public partial class Products : Page
         linkTShirtAdd.Visible = false;
         linkPlaqueAdd.Visible = false;
         lblEngrave.Visible = false;
-        txtEngrave.Visible = false;
+        txtPEngrave.Visible = false;
+        lblEngrave0.Visible = false;
+        txtTEngrave.Visible = false;
+
+        if (Session["UserAuthentication"] != null)
+        {
+            
+        }
     }
 
     //im going to assume that this is the "Buy" button for the plaques. this has since been renamed
@@ -38,7 +45,7 @@ public partial class Products : Page
         txtPlaqueQty.Focus();
         linkPlaqueAdd.Visible = true;
         lblEngrave.Visible = true;
-        txtEngrave.Visible = true;
+        txtPEngrave.Visible = true;
     }
 
     //im going to assume that this is the "Buy" button for the tshirts. this has since been renamed
@@ -48,6 +55,8 @@ public partial class Products : Page
         txtTShirtQty.Visible = true;
         txtTShirtQty.Focus();
         linkTShirtAdd.Visible = true;
+        lblEngrave0.Visible = true;
+        txtTEngrave.Visible = true;
     }
 
     //i am unsure what these two functions are being used for. will leave them be for now
@@ -119,7 +128,7 @@ public partial class Products : Page
             ProductClass.productName = "Plaque";
             ProductClass.productPrice = 20;
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
-            ProductClass.productEngraving = txtEngrave.Text;
+            ProductClass.productEngraving = txtPEngrave.Text;
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
             String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString("C2") + "\nEngraving: " + ProductClass.productEngraving + "\n\n\nIs this correct?";

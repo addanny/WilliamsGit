@@ -19,8 +19,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
-      
+        if (Session["UserAuthentication"] != null)
+        {
+            lblUserName.Text = (string)Session["UserAuthentication"];
+        }
+        else
+        {
+            lblUserName.Text = "guest";
+        }
     }
 
     protected void Hyperlink3_Click()

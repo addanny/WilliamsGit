@@ -52,7 +52,10 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblTShirtWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
         <br />
-    <hr />
+        <br />
+        <asp:Label ID="lblEngrave0" runat="server" Text="Engraving: "></asp:Label>
+        <asp:TextBox ID="txtTEngrave" runat="server" Width="323px"></asp:TextBox>
+        <br />
     <table class="auto-style2">
             <tbody><tr>
                 <th rowspan="6" class="auto-style3">
@@ -84,7 +87,7 @@
         <br />
         <br />
         <asp:Label ID="lblEngrave" runat="server" Text="Engraving: "></asp:Label>
-        <asp:TextBox ID="txtEngrave" runat="server" Width="323px"></asp:TextBox>
+        <asp:TextBox ID="txtPEngrave" runat="server" Width="323px"></asp:TextBox>
       <br />
     <br/>
     </asp:Content>
