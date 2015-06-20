@@ -17,6 +17,10 @@
         <br />
         <br />
         <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" Visible="False" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <br />
+        <br />
 </div>
 </asp:Content>
 

@@ -18,16 +18,15 @@ using System.Windows.Forms;
 
 public partial class _Default : System.Web.UI.Page
 {
-    
-
     protected void Page_Load(object sender, EventArgs e)
     {
         //turn off the login form and display user name when page loads
-        if((string)Session["UserAuthentication"] != null)
+        if (Session["UserAuthentication"] != null)
         {
             lblLoginMsg.Visible = true;
-            lblUserName.Text = (string)Session["UserAuthentication"];
+            lblUserName.Text = Session["UserAuthentication"].ToString();
             lblUserName.Visible = true;
+            Login1.Visible = false;
             btnLogout.Visible = true;
         }
     }
@@ -43,18 +42,24 @@ public partial class _Default : System.Web.UI.Page
 
         //open the connection
         con.Open();
-        
+
         //insert SQL statement
         sqlUserName = "SELECT Username,Password FROM tblLogin WHERE Username ='" + username + "' AND Password ='" + pwd + "'";
         SqlCommand cmd = new SqlCommand(sqlUserName, con);
         string CurrentName = (string)cmd.ExecuteScalar();
+
         //authenticate user
         if (CurrentName != null)
         {
             //access granted
             Session["UserAuthentication"] = username;
-            Session.Timeout = 1000;
-            //Response.Redirect("~/Home.aspx");
+            Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
+            lblLoginMsg.Visible = true;
+            lblUserName.Text = username;
+            lblUserName.Visible = true;
+            Login1.Visible = false;
+            btnLogout.Visible = true;
+            //Response.Redirect("~/Products.aspx");
             con.Close();
         }
         else
@@ -77,3 +82,4 @@ public partial class _Default : System.Web.UI.Page
         Response.Redirect("~/Login.aspx");
     }
 }
+
