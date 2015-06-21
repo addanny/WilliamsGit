@@ -27,6 +27,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             lblUserName.Text = "guest";
         }
+
+        if (Session["Role"] != null)
+        {
+            lblRole.Text = (string)Session["Role"];
+        } 
     }
 
     protected void Hyperlink3_Click()

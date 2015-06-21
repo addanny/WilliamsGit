@@ -83,7 +83,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <asp:Label ID="lblPlaqueWarning" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="Warning Label" Visible="False"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" Height="26px" Width="48px" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="TEST" Height="26px" Width="48px" Visible="False" />
         <br />
         <br />
         <asp:Label ID="lblEngrave" runat="server" Text="Engraving: "></asp:Label>

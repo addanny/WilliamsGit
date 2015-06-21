@@ -63,18 +63,18 @@ public partial class _Default : System.Web.UI.Page
         using (SqlConnection connection = new SqlConnection(s))
         {
             //gather the values
-            SqlCommand cmd = new SqlCommand("INSERT INTO dbo.tblcustomer (Fname, Lname, Address, City, Zip, State, Email) VALUES (@Fname, @LName, @Address, @City, @Zip, @State, @Email)");
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = connection;
-            cmd.Parameters.AddWithValue("@FName", txtFName.Text);
-            cmd.Parameters.AddWithValue("@LName", txtLName.Text);
-            cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-            cmd.Parameters.AddWithValue("@City", txtCity.Text);
-            cmd.Parameters.AddWithValue("@State", ddState.SelectedValue);
-            cmd.Parameters.AddWithValue("@Zip", txtZip.Text);
-            cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+            SqlCommand addCustomer = new SqlCommand("INSERT INTO dbo.tblcustomer (Fname, Lname, Address, City, Zip, State, Email) VALUES (@Fname, @LName, @Address, @City, @Zip, @State, @Email)");
+            addCustomer.CommandType = CommandType.Text;
+            addCustomer.Connection = connection;
+            addCustomer.Parameters.AddWithValue("@FName", txtFName.Text);
+            addCustomer.Parameters.AddWithValue("@LName", txtLName.Text);
+            addCustomer.Parameters.AddWithValue("@Address", txtAddress.Text);
+            addCustomer.Parameters.AddWithValue("@City", txtCity.Text);
+            addCustomer.Parameters.AddWithValue("@State", ddState.SelectedValue);
+            addCustomer.Parameters.AddWithValue("@Zip", txtZip.Text);
+            addCustomer.Parameters.AddWithValue("@Email", txtEmail.Text);
             connection.Open();
-            cmd.ExecuteNonQuery();
+            addCustomer.ExecuteNonQuery();
         }
 
         //display message of great success

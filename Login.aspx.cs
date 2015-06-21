@@ -37,6 +37,7 @@ public partial class _Default : System.Web.UI.Page
         string username = Login1.UserName;
         string pwd = Login1.Password;
         string sqlUserName;
+        String sqlUserRole;
         string s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(s);
 
@@ -53,13 +54,14 @@ public partial class _Default : System.Web.UI.Page
         {
             //access granted
             Session["UserAuthentication"] = username;
+            //Session["Role"] = sqlUserRole;
             Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
             lblLoginMsg.Visible = true;
             lblUserName.Text = username;
             lblUserName.Visible = true;
             Login1.Visible = false;
             btnLogout.Visible = true;
-            //Response.Redirect("~/Products.aspx");
+            Response.Redirect("~/Products.aspx");
             con.Close();
         }
         else

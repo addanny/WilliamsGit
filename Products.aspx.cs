@@ -31,32 +31,45 @@ public partial class Products : Page
         lblEngrave0.Visible = false;
         txtTEngrave.Visible = false;
 
-        if (Session["UserAuthentication"] != null)
-        {
-            
-        }
+        
     }
 
     //im going to assume that this is the "Buy" button for the plaques. this has since been renamed
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Label2.Visible = true;
-        txtPlaqueQty.Visible = true;
-        txtPlaqueQty.Focus();
-        linkPlaqueAdd.Visible = true;
-        lblEngrave.Visible = true;
-        txtPEngrave.Visible = true;
+        if (Session["UserAuthentication"] != null)
+        {
+            Label2.Visible = true;
+            txtPlaqueQty.Visible = true;
+            txtPlaqueQty.Focus();
+            linkPlaqueAdd.Visible = true;
+            lblEngrave.Visible = true;
+            txtPEngrave.Visible = true;
+            
+        }
+        else
+        {
+            MessageBox.Show("Please log-in to purchase items");
+        }
+        
     }
 
     //im going to assume that this is the "Buy" button for the tshirts. this has since been renamed
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Label1.Visible = true;
-        txtTShirtQty.Visible = true;
-        txtTShirtQty.Focus();
-        linkTShirtAdd.Visible = true;
-        lblEngrave0.Visible = true;
-        txtTEngrave.Visible = true;
+        if (Session["UserAuthentication"] != null)
+        {
+            Label1.Visible = true;
+            txtTShirtQty.Visible = true;
+            txtTShirtQty.Focus();
+            linkTShirtAdd.Visible = true;
+            lblEngrave0.Visible = true;
+            txtTEngrave.Visible = true; 
+        }
+        else
+        {
+            MessageBox.Show("Please log-in to purchase items");
+        }
     }
 
     //i am unsure what these two functions are being used for. will leave them be for now
@@ -82,9 +95,21 @@ public partial class Products : Page
             ProductClass.productName = "T-Shirt";
             ProductClass.productPrice = 10;
             ProductClass.productQty = Int32.Parse(txtTShirtQty.Text);
+            if (txtTEngrave.Text != null)
+            {
+                ProductClass.productEngraving = txtTEngrave.Text;
+            }
+            else
+            {
+                ProductClass.productEngraving = " ";
+            }
             //price of tshirts
             int totalTShirtPrice = ProductClass.productPrice * ProductClass.productQty;
-            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalTShirtPrice.ToString("C2");
+            String displayOrder = ProductClass.productName 
+                + "\nQuantity: " + ProductClass.productQty.ToString() 
+                + "\nEngraving: " + ProductClass.productEngraving
+                + "\nTotal Price: " + totalTShirtPrice.ToString("C2") 
+                + "\n\n\nIs this correct?";
             //display summary of the order
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
@@ -105,15 +130,7 @@ public partial class Products : Page
     //button that is being used to test the syntax/logic - delete or make hidden when done
     protected void Button3_Click(object sender, EventArgs e)
     {
-        try
-        {
-            string userName = Session["UserAuthentication"].ToString();
-            MessageBox.Show(userName);
-        }
-        catch (Exception)
-        {
-            MessageBox.Show("No one is logged in!", "Error");
-        }
+        
     }
 
     //will add the qty of the plaques to the shop page. will catch non-integers
@@ -128,15 +145,24 @@ public partial class Products : Page
             ProductClass.productName = "Plaque";
             ProductClass.productPrice = 20;
             ProductClass.productQty = Int32.Parse(txtPlaqueQty.Text);
-            ProductClass.productEngraving = txtPEngrave.Text;
+            if (txtPEngrave.Text != null)
+            {
+                ProductClass.productEngraving = txtPEngrave.Text;
+            }
+            else
+            {
+                ProductClass.productEngraving = " ";
+            }
             //price of plaques
             int totalPlaquePrice = ProductClass.productPrice * ProductClass.productQty;
-            String displayOrder = ProductClass.productName + "\n" + "Quantity: " + ProductClass.productQty.ToString() + "\n" + "Total Price: " + totalPlaquePrice.ToString("C2") + "\nEngraving: " + ProductClass.productEngraving + "\n\n\nIs this correct?";
+            String displayOrder = ProductClass.productName 
+                + "\nQuantity: " + ProductClass.productQty.ToString()
+                + "\nEngraving: " + ProductClass.productEngraving
+                + "\nTotal Price: " + totalPlaquePrice.ToString("C2") 
+                + "\n\n\nIs this correct?";
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
-                //add items to db
-                MessageBox.Show("This is test for yes");
                 Response.Redirect("~/Customer.aspx");
             }
         }

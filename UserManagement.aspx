@@ -30,7 +30,22 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Username], [Password], [Role] FROM [tblLogin]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tblLogin]" DeleteCommand="DELETE FROM [tblLogin] WHERE [LoginId] = @original_LoginId" InsertCommand="INSERT INTO [tblLogin] ([Username], [Password], [Role]) VALUES (@Username, @Password, @Role)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [tblLogin] SET [Username] = @Username, [Password] = @Password, [Role] = @Role WHERE [LoginId] = @original_LoginId">
+        <DeleteParameters>
+            <asp:Parameter Name="original_LoginId" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="Password" Type="String" />
+            <asp:Parameter Name="Role" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="Password" Type="String" />
+            <asp:Parameter Name="Role" Type="String" />
+            <asp:Parameter Name="original_LoginId" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 </p>
 <p>
     &nbsp;</p>
