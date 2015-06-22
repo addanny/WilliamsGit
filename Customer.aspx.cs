@@ -60,6 +60,7 @@ public partial class _Default : System.Web.UI.Page
     //time to add the data to the customer database
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+
         if (txtPassword.Text == txtConfirmPW.Text)
         {
             //declare variables

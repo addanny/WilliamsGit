@@ -32,9 +32,7 @@ public partial class Products : Page
         lblEngrave.Visible = false;
         txtPEngrave.Visible = false;
         lblEngrave0.Visible = false;
-        txtTEngrave.Visible = false;
-
-        
+        txtTEngrave.Visible = false;        
     }
 
     //im going to assume that this is the "Buy" button for the plaques. this has since been renamed
@@ -48,7 +46,7 @@ public partial class Products : Page
             linkPlaqueAdd.Visible = true;
             lblEngrave.Visible = true;
             txtPEngrave.Visible = true;
-            
+            lblPlaqueWarning.Visible = false;        
         }
         else
         {
@@ -67,7 +65,8 @@ public partial class Products : Page
             txtTShirtQty.Focus();
             linkTShirtAdd.Visible = true;
             lblEngrave0.Visible = true;
-            txtTEngrave.Visible = true; 
+            txtTEngrave.Visible = true;
+            lblTShirtWarning.Visible = false;
         }
         else
         {

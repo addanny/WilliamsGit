@@ -15,7 +15,7 @@
     <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" ForeColor="White" VisibleWhenLoggedIn="False">
     </asp:Login>
         <br />
-    <asp:Button ID="Button1" runat="server" PostBackUrl="~/Customer.aspx" Text="Create User" />
+    <asp:Button ID="Button1" runat="server" PostBackUrl="~/Customer.aspx" Text="Create User" Visible="False" />
     <br />
         <br />
         <br />

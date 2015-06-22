@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
-    <asp:Label ID="Label1" runat="server" ForeColor="White" Text="Order Review"></asp:Label>
+    <asp:Label ID="Label1" runat="server" ForeColor="White" Text="Order Review" Font-Size="XX-Large"></asp:Label>
     <br />
     <br />
     <br />

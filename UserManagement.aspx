@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" Runat="Server">
     <p>
-    <asp:Label ID="Label1" runat="server" ForeColor="White" Text="User Management"></asp:Label>
+    <asp:Label ID="Label1" runat="server" ForeColor="White" Text="User Management" Font-Size="XX-Large"></asp:Label>
 </p>
 <p>
     &nbsp;</p>
