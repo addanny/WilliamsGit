@@ -40,9 +40,11 @@ public partial class _Default : System.Web.UI.Page
     //erases all data from the txt forms - asks for confirmation and if yes sends user home to start all over
     protected void btnCancel_Click(object sender, EventArgs e)
     {
+        //determine what happens when you hit the cancel button
         DialogResult cancelForm = MessageBox.Show("Are you sure you want to cancel?" , "Cancel Confirmation", MessageBoxButtons.YesNo);
         if (cancelForm == DialogResult.Yes)
         {
+            //resest the form
             txtFName.Text = "";
             txtLName.Text = "";
             txtAddress.Text = "";
@@ -50,6 +52,7 @@ public partial class _Default : System.Web.UI.Page
             ddState.SelectedIndex = 0;
             txtZip.Text = "";
             txtEmail.Text = "";
+            //send user back to home
             Response.Redirect("~/Home.aspx"); 
         }
     }
@@ -92,10 +95,11 @@ public partial class _Default : System.Web.UI.Page
             ddState.SelectedIndex = 0;
             txtZip.Text = "";
             txtEmail.Text = "";
-            Response.Redirect("~/Home.aspx"); 
+            Response.Redirect("~/OrderReview.aspx"); 
         }
         else
         {
+            //display an error message
             MessageBox.Show("Password does not match");
         }
     }

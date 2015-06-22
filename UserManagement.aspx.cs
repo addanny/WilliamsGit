@@ -17,6 +17,7 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //display the information if there is an appropriate user - otherwise, do not
         if (((string)Session["UserAuthentication"] == "bbusch") || ((string)Session["UserAuthentication"] == "isava"))
         {
             GridView1.Visible = true;

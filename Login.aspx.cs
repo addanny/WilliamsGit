@@ -34,27 +34,23 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
-            //declare the variables
+        //declare the variables
         string username = Login1.UserName;
         string pwd = Login1.Password;
-
         string sqlUserName;
         //String sqlUserRole;
         string s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(s);
-
-             //open the connection
+        //open the connection
         con.Open();
-
-               //insert SQL statement
+        //insert SQL statement
         sqlUserName = "SELECT Username,Password,Role FROM tblLogin WHERE Username ='" + username + "' AND Password ='" + pwd + "'";
         SqlCommand cmd = new SqlCommand(sqlUserName, con);
         string CurrentName = (string)cmd.ExecuteScalar();
-
         //authenticate user
         if (CurrentName != null)
         {
-                   //access granted
+            //access granted
             Session["UserAuthentication"] = username;
             Session.Timeout = 1000;
             lblLoginMsg.Visible = true;
@@ -67,21 +63,19 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
-                   //access denied
+            //access denied
             Session["UserAuthentication"] = "";
             con.Close();
         }
     }
 
-
+    //function that logs the user out - resest information on the master page - redirects user to login
     protected void btnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
         Session.Abandon();
         Session.Remove("UserAuthentication");
-
         Session["UserAuthentication"] = null;
-
         Response.Redirect("~/Login.aspx");
     }
 }

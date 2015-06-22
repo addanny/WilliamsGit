@@ -16,7 +16,7 @@ using System.Web.UI.WebControls;
 public partial class MasterPage : System.Web.UI.MasterPage
 {
     
-
+    //display user name at the bottom-left of the screen
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserAuthentication"] != null)
@@ -28,6 +28,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             lblUserName.Text = "guest";
         }
 
+        //display the user role and assign the appropriate links
         switch((string)Session["UserAuthentication"])
         {
             case "bbusch":              

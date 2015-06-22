@@ -15,6 +15,7 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    //display the information if there is an appropriate user - otherwise, do not
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -27,6 +28,6 @@ public partial class _Default : System.Web.UI.Page
 
     protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
     {
-
+        
     }
 }

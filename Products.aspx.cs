@@ -124,12 +124,12 @@ public partial class Products : Page
                 using (SqlConnection connection = new SqlConnection(s))
                 {
                     //gather the values
-                    SqlCommand addTShirtOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemID, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @orderEngrave");
+                    SqlCommand addTShirtOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemId, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @Engrave)");
                     addTShirtOrder.CommandType = CommandType.Text;
                     addTShirtOrder.Connection = connection;
                     addTShirtOrder.Parameters.AddWithValue("@ItemID", "1");
                     addTShirtOrder.Parameters.AddWithValue("@ItemQty", ProductClass.productQty);
-                    addTShirtOrder.Parameters.AddWithValue("@orderEngrave", txtTEngrave.Text);
+                    addTShirtOrder.Parameters.AddWithValue("@Engrave", txtTEngrave.Text);
                     connection.Open();
                     addTShirtOrder.ExecuteNonQuery();
                     connection.Close();
@@ -189,7 +189,7 @@ public partial class Products : Page
                 using (SqlConnection connection = new SqlConnection(s))
                 {
                     //gather the values
-                    SqlCommand addPlaqueOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemID, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @orderEngrave");
+                    SqlCommand addPlaqueOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemId, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @orderEngrave)");
                     addPlaqueOrder.CommandType = CommandType.Text;
                     addPlaqueOrder.Connection = connection;
                     addPlaqueOrder.Parameters.AddWithValue("@ItemID", "2");
