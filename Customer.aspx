@@ -86,18 +86,24 @@
     <asp:TextBox ID="txtEmail" runat="server" Width="215px"></asp:TextBox>
     <br />
     <br />
+    <asp:Label ID="Label9" runat="server" ForeColor="White" Text="Password:"></asp:Label>
+    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+    <br />
+    <asp:Label ID="Label10" runat="server" ForeColor="White" Text="Confirm password: "></asp:Label>
+    <asp:TextBox ID="txtConfirmPW" runat="server" TextMode="Password"></asp:TextBox>
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br />
     <asp:Button ID="btnSubmit" runat="server" Height="48px" Text="Submit" Width="96px" OnClick="btnSubmit_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnReset" runat="server" OnClick="btnReset_Click" Text="Reset Form" />
     <br />
     <br />
-    <br />
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphLeftNavigation" Runat="Server">
-</asp:Content>
+
 
 

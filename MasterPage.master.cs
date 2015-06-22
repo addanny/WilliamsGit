@@ -28,10 +28,60 @@ public partial class MasterPage : System.Web.UI.MasterPage
             lblUserName.Text = "guest";
         }
 
-        if (Session["Role"] != null)
+        switch(Session["UserAuthentication"].ToString())
         {
-            lblRole.Text = (string)Session["Role"];
-        } 
+            case "bbusch":
+                {
+                    lnkProducts.Visible = true;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = true;
+                    lnkUserMgt.Visible = true;
+                    lnkInventoryMgt.Visible = true;
+                    lnkCustomerMgt.Visible = true;
+                    break;
+                }
+            case "isava":
+                {
+                    lnkProducts.Visible = true;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = true;
+                    lnkUserMgt.Visible = true;
+                    lnkInventoryMgt.Visible = true;
+                    lnkCustomerMgt.Visible = true;
+                    break;
+                }
+            case "ddalloo":
+                {
+                    lnkProducts.Visible = true;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = false;
+                    lnkUserMgt.Visible = false;
+                    lnkInventoryMgt.Visible = false;
+                    lnkCustomerMgt.Visible = true;
+                    break;
+                }
+            case "jmorales":
+                {
+                    lnkProducts.Visible = false;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = false;
+                    lnkUserMgt.Visible = false;
+                    lnkInventoryMgt.Visible = true;
+                    lnkCustomerMgt.Visible = false;
+                    break;
+                }
+            case "croark":
+                {
+                    lnkProducts.Visible = false;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = true;
+                    lnkUserMgt.Visible = false;
+                    lnkInventoryMgt.Visible = true;
+                    lnkCustomerMgt.Visible = false;
+                    break;
+                }
+        }
+ 
     }
 
     protected void Hyperlink3_Click()

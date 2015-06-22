@@ -38,25 +38,25 @@
             <asp:ContentPlaceHolder ID="cphLeftNavigation" runat="server">
 
                 <p>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" ForeColor="White">Home</asp:HyperLink>
+                    <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Home.aspx" ForeColor="White">Home</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx" ForeColor="White">Products</asp:HyperLink>
+                    <asp:HyperLink ID="lnkProducts" runat="server" NavigateUrl="~/Products.aspx" ForeColor="White">Products</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx" ForeColor="White">Login</asp:HyperLink>
+                    <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" ForeColor="White">Login</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink4" runat="server" ForeColor="White" NavigateUrl="~/UserManagement.aspx">User Mgmt</asp:HyperLink>
+                    <asp:HyperLink ID="lnkUserMgt" runat="server" ForeColor="White" NavigateUrl="~/UserManagement.aspx">User Mgmt</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="White" NavigateUrl="~/OrderReview.aspx">Order Review</asp:HyperLink>
+                    <asp:HyperLink ID="lnkOrderRvw" runat="server" ForeColor="White" NavigateUrl="~/OrderReview.aspx">Order Review</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="White" NavigateUrl="~/CustomerManagement.aspx">Customer Management</asp:HyperLink>
+                    <asp:HyperLink ID="lnkCustomerMgt" runat="server" ForeColor="White" NavigateUrl="~/CustomerManagement.aspx">Customer Management</asp:HyperLink>
                 </p>
                 <p>
-                    <asp:HyperLink ID="HyperLink7" runat="server" ForeColor="White" NavigateUrl="~/InventoryManagement.aspx">Inventory Management</asp:HyperLink>
+                    <asp:HyperLink ID="lnkInventoryMgt" runat="server" ForeColor="White" NavigateUrl="~/InventoryManagement.aspx">Inventory Management</asp:HyperLink>
                 </p>
                 <p>
                     &nbsp;</p>

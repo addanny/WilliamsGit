@@ -28,34 +28,35 @@ public partial class _Default : System.Web.UI.Page
             lblUserName.Visible = true;
             Login1.Visible = false;
             btnLogout.Visible = true;
+            Button1.Visible = false;
         }
     }
 
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
-        //declare the variables
+            //declare the variables
         string username = Login1.UserName;
         string pwd = Login1.Password;
+
         string sqlUserName;
-        String sqlUserRole;
+        //String sqlUserRole;
         string s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(s);
 
-        //open the connection
+             //open the connection
         con.Open();
 
-        //insert SQL statement
-        sqlUserName = "SELECT Username,Password FROM tblLogin WHERE Username ='" + username + "' AND Password ='" + pwd + "'";
+               //insert SQL statement
+        sqlUserName = "SELECT Username,Password,Role FROM tblLogin WHERE Username ='" + username + "' AND Password ='" + pwd + "'";
         SqlCommand cmd = new SqlCommand(sqlUserName, con);
         string CurrentName = (string)cmd.ExecuteScalar();
 
         //authenticate user
         if (CurrentName != null)
         {
-            //access granted
+                   //access granted
             Session["UserAuthentication"] = username;
-            //Session["Role"] = sqlUserRole;
-            Session.Timeout = 1000;   //session timeout defaults to 30", why wont I stay logged in
+            Session.Timeout = 1000;
             lblLoginMsg.Visible = true;
             lblUserName.Text = username;
             lblUserName.Visible = true;
@@ -66,7 +67,7 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {
-            //access denied
+                   //access denied
             Session["UserAuthentication"] = "";
             con.Close();
         }

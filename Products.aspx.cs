@@ -8,8 +8,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
@@ -114,8 +117,24 @@ public partial class Products : Page
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
-                //add items to db
-                MessageBox.Show("This is test for yes");
+                //declare variables
+                string s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                //connect code to the databse
+                using (SqlConnection connection = new SqlConnection(s))
+                {
+                    //gather the values
+                    SqlCommand addTShirtOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemID, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @orderEngrave");
+                    addTShirtOrder.CommandType = CommandType.Text;
+                    addTShirtOrder.Connection = connection;
+                    addTShirtOrder.Parameters.AddWithValue("@ItemID", "1");
+                    addTShirtOrder.Parameters.AddWithValue("@ItemQty", ProductClass.productQty);
+                    addTShirtOrder.Parameters.AddWithValue("@orderEngrave", txtTEngrave.Text);
+                    connection.Open();
+                    addTShirtOrder.ExecuteNonQuery();
+                    connection.Close();
+                }
+                //display message of great success
+                MessageBox.Show("Order Added Successfully", "Success!");
                 Response.Redirect("~/Customer.aspx");
             }
         }
@@ -163,6 +182,23 @@ public partial class Products : Page
             DialogResult orderReviewDialog = MessageBox.Show(displayOrder, "Order Review", MessageBoxButtons.YesNo);
             if (orderReviewDialog == DialogResult.Yes)
             {
+                //declare variables
+                string s = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                //connect code to the databse
+                using (SqlConnection connection = new SqlConnection(s))
+                {
+                    //gather the values
+                    SqlCommand addPlaqueOrder = new SqlCommand("INSERT INTO dbo.tblOrders (ItemID, ItemQty, orderEngrave) VALUES (@ItemID, @ItemQty, @orderEngrave");
+                    addPlaqueOrder.CommandType = CommandType.Text;
+                    addPlaqueOrder.Connection = connection;
+                    addPlaqueOrder.Parameters.AddWithValue("@ItemID", "2");
+                    addPlaqueOrder.Parameters.AddWithValue("@ItemQty", ProductClass.productQty);
+                    addPlaqueOrder.Parameters.AddWithValue("@orderEngrave", ProductClass.productEngraving);                  
+                    connection.Open();
+                    addPlaqueOrder.ExecuteNonQuery();
+                }
+                //display message of great success
+                MessageBox.Show("Customer Added Successfully", "Success!");
                 Response.Redirect("~/Customer.aspx");
             }
         }
