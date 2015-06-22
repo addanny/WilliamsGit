@@ -62,7 +62,7 @@ public partial class _Default : System.Web.UI.Page
             lblUserName.Visible = true;
             Login1.Visible = false;
             btnLogout.Visible = true;
-            Response.Redirect("~/Products.aspx");
+            Response.Redirect("~/Home.aspx");
             con.Close();
         }
         else

@@ -28,56 +28,62 @@ public partial class MasterPage : System.Web.UI.MasterPage
             lblUserName.Text = "guest";
         }
 
-        switch(Session["UserAuthentication"].ToString())
+        switch((string)Session["UserAuthentication"])
         {
-            case "bbusch":
-                {
+            case "bbusch":              
                     lnkProducts.Visible = true;
                     lnkLogin.Visible = true;
                     lnkOrderRvw.Visible = true;
                     lnkUserMgt.Visible = true;
                     lnkInventoryMgt.Visible = true;
                     lnkCustomerMgt.Visible = true;
-                    break;
-                }
+                    lblRole.Text = "Operations Mgr";
+                    break;              
             case "isava":
-                {
                     lnkProducts.Visible = true;
                     lnkLogin.Visible = true;
                     lnkOrderRvw.Visible = true;
                     lnkUserMgt.Visible = true;
                     lnkInventoryMgt.Visible = true;
                     lnkCustomerMgt.Visible = true;
+                    lblRole.Text = "Operations Mgr";
                     break;
-                }
             case "ddalloo":
-                {
                     lnkProducts.Visible = true;
                     lnkLogin.Visible = true;
                     lnkOrderRvw.Visible = false;
                     lnkUserMgt.Visible = false;
                     lnkInventoryMgt.Visible = false;
                     lnkCustomerMgt.Visible = true;
+                    lblRole.Text = "Sales";
                     break;
-                }
-            case "jmorales":
-                {
+            case "jamorales":
                     lnkProducts.Visible = false;
                     lnkLogin.Visible = true;
                     lnkOrderRvw.Visible = false;
                     lnkUserMgt.Visible = false;
                     lnkInventoryMgt.Visible = true;
                     lnkCustomerMgt.Visible = false;
+                    lblRole.Text = "Storeroom";
                     break;
-                }
             case "croark":
-                {
                     lnkProducts.Visible = false;
                     lnkLogin.Visible = true;
                     lnkOrderRvw.Visible = true;
                     lnkUserMgt.Visible = false;
                     lnkInventoryMgt.Visible = true;
                     lnkCustomerMgt.Visible = false;
+                    lblRole.Text = "Printer/Engraver";
+                    break;
+            default:
+                {
+                    lnkProducts.Visible = true;
+                    lnkLogin.Visible = true;
+                    lnkOrderRvw.Visible = false;
+                    lnkUserMgt.Visible = false;
+                    lnkInventoryMgt.Visible = false;
+                    lnkCustomerMgt.Visible = false;
+                    lblRole.Text = "Guest";
                     break;
                 }
         }
