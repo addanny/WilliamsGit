@@ -17,6 +17,13 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (((string)Session["UserAuthentication"] == "bbusch") || ((string)Session["UserAuthentication"] == "isava"))
+        {
+            GridView1.Visible = true;
+        }
+        else
+        {
+            GridView1.Visible = false;
+        }
     }
 }

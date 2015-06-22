@@ -72,6 +72,7 @@ public partial class Products : Page
         else
         {
             MessageBox.Show("Please log-in to purchase items");
+            Response.Redirect("~/Login.aspx");           
         }
     }
 

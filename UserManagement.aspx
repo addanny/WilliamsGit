@@ -9,15 +9,13 @@
 <p>
     &nbsp;</p>
 <p>
-    &nbsp;</p>
-<p>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" />
-            <asp:CommandField ShowEditButton="True" />
+            <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" ReadOnly="True" />
+            <asp:CommandField ShowDeleteButton="True" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
